@@ -5,10 +5,9 @@ A complete scroll-driven hero website built with plain HTML, CSS and JavaScript.
 
 ## Run
 
-1. Extract the ZIP.
-2. Open the folder in VS Code.
-3. Open `index.html` in a browser, or use the VS Code Live Server extension.
-4. Scroll down from the hero.
+1. Open the folder in VS Code.
+2. Open `index.html` in a browser, or use the VS Code Live Server extension.
+3. Scroll down from the hero.
 
 ## Main files
 
