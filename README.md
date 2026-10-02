@@ -1,55 +1,38 @@
-# ItzFizz — Scroll-Driven Hero Section
+[README.md](https://github.com/user-attachments/files/32952649/README.md)
+# ItzFizz Scroll Hero
 
-A frontend animation assignment built with HTML, CSS, JavaScript and GSAP. The hero uses scroll position as the animation timeline, with transform-based movement for smooth interaction.
+A complete scroll-driven hero website built with plain HTML, CSS and JavaScript.
 
-## Features
+## Run
 
-- Full-screen hero section
-- Letter-spaced `WELCOME ITZFIZZ` headline
-- Staggered intro animation
-- Animated impact metrics
-- Scroll-linked visual movement
-- Smooth easing/interpolation
-- requestAnimationFrame scroll handling
-- Transform-based animation for performance
-- Responsive mobile layout
-- CSS-built hero visual with no required image asset
-- GitHub Pages compatible
+1. Extract the ZIP.
+2. Open the folder in VS Code.
+3. Open `index.html` in a browser, or use the VS Code Live Server extension.
+4. Scroll down from the hero.
 
-## Run locally
+## Main files
 
-Open `index.html` directly in a browser, or use VS Code Live Server.
+- `index.html` — page structure
+- `style.css` — layout and visual styling
+- `script.js` — scroll-linked animation
+- `assets/samurai.svg` — standalone samurai artwork
 
-## GitHub Pages deployment
+## Scroll behavior
 
-1. Create a GitHub repository, for example `itzfizz-scroll-hero`.
-2. Upload `index.html` and `README.md`.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`.
-6. Save and wait for GitHub Pages to publish.
-7. Your URL will be:
+The animation is driven by `window.scrollY`. It calculates a normalized scroll progress from `0` to `1`, then interpolates toward that value on `requestAnimationFrame`.
 
-`https://YOUR-USERNAME.github.io/itzfizz-scroll-hero/`
+The vehicle moves diagonally and rotates slightly.
+The samurai follows a separate curved path using the same scroll progress.
+No time-based autoplay is used.
 
-## Technologies
+## Replace the samurai
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- GSAP 3
-- Google Fonts
+If you have a transparent PNG/WebP samurai, replace:
 
-## Assignment mapping
+`assets/samurai.svg`
 
-### Hero layout
-Full-screen hero, letter-spaced headline and three percentage/statistic blocks.
+and change the image source in `index.html` to your file, for example:
 
-### Initial load
-Headline characters reveal in sequence, followed by the supporting copy, visual and statistics.
+`assets/samurai.png`
 
-### Scroll animation
-The visual object changes position, scale and rotation based directly on scroll progress.
-
-### Performance
-Scroll events use `requestAnimationFrame`, while visual movement is performed through CSS transforms rather than layout properties.
+A transparent image is recommended for the cleanest result.
